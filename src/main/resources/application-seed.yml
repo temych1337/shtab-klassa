@@ -1,0 +1,9 @@
+# Профиль демо: ./gradlew bootRun --args='--spring.profiles.active=seed'
+# Реальные id телефонов в MAX для показа - в application-local.yml:
+#   seed:
+#     teacher-id: "123456789"
+#     parent-ids: ["111111111", "222222222"]
+
+shtab:
+  # родителям demo-NN ничего не шлём, в сводке они отдельной строкой "демо-аккаунтов: N"
+  demo-accounts: true

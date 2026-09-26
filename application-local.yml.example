@@ -1,0 +1,25 @@
+# Скопировать в application-local.yml (он в .gitignore) - подхватится автоматически.
+
+# Бот в MAX (основной транспорт). Токен - из кабинета бота в MAX для разработчиков.
+#max:
+#  enabled: true
+#  token: "токен-бота"
+
+# Демо (профиль seed): user_id телефонов в MAX. Узнать id - написать боту что угодно,
+# в логе будет "пишет незнакомый пользователь, id=...".
+#seed:
+#  teacher-id: "123456789"
+#  parent-ids: ["111111111", "222222222"]
+
+# Запасной транспорт - бот сообщества VK. Включать что-то одно: MAX или VK.
+#vk:
+#  enabled: true
+#  token: vk1.a.xxxxxxxx
+#  group-id: 123456789
+
+# Переход на PostgreSQL:
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/shtab
+#    username: shtab
+#    password: shtab

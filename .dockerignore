@@ -1,0 +1,8 @@
+.gradle
+build
+data
+.idea
+*.iml
+out
+application-local.yml
+.git

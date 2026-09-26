@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:shtab-test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+  # у каждого тестового контекста свой RAM-планировщик, иначе Quartz отдаст чужой по совпавшему имени
+  quartz:
+    scheduler-name: shtab-${random.uuid}
+
+shtab:
+  summary:
+    min-interval: 200ms

@@ -1,0 +1,9 @@
+.gradle/
+build/
+data/
+*.mv.db
+*.trace.db
+.idea/
+*.iml
+out/
+application-local.yml

@@ -1,0 +1,25 @@
+# Показ без мессенджера: ./gradlew bootRun --args='--spring.profiles.active=seed,emulator'
+# и открыть http://localhost:8080/emulator/
+emulator:
+  enabled: true
+
+# три "живых" родителя, за которых можно нажимать кнопки; остальные 24 - демо-аккаунты
+seed:
+  teacher-id: emu-teacher
+  parent-ids: [emu-parent-1, emu-parent-2, emu-parent-3]
+
+spring:
+  datasource:
+    # своя база, чтобы не смешиваться с данными обычного запуска
+    url: jdbc:h2:file:./data/emulator;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;AUTO_SERVER=TRUE
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          # после обновления эмулятора браузер иначе показывает старую страницу из кеша - проверено на себе
+          no-cache: true
+
+shtab:
+  reminder:
+    # на показе "Напомнить молчащим" нажимают дважды с разницей в минуту
+    cooldown: 30s

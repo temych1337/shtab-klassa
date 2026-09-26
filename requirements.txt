@@ -1,0 +1,26 @@
+# Штаб класса - библиотеки и версии (п. 9.7 правил хакатона).
+# Проект на Java, зависимости ставит Gradle из build.gradle.kts; этот файл - для чтения, pip тут ни при чём.
+
+# Платформа
+Java (Eclipse Temurin JDK/JRE) 21
+Gradle (wrapper) 8.14.3
+Docker-образы: eclipse-temurin:21-jdk (сборка), eclipse-temurin:21-jre (запуск)
+
+# Приложение
+org.springframework.boot:spring-boot-starter-web 3.5.6        # Spring 6.2.11, Tomcat 10.1.46, Jackson 2.19.2
+org.springframework.boot:spring-boot-starter-validation 3.5.6
+org.springframework.boot:spring-boot-starter-data-jpa 3.5.6   # Hibernate ORM 6.6.29.Final
+org.springframework.boot:spring-boot-starter-quartz 3.5.6     # Quartz 2.5.0
+org.flywaydb:flyway-core 11.7.2
+org.flywaydb:flyway-database-postgresql 11.7.2
+com.h2database:h2 2.3.232
+org.postgresql:postgresql 42.7.7
+
+# Тесты
+org.springframework.boot:spring-boot-starter-test 3.5.6       # JUnit 5, AssertJ, Mockito
+com.squareup.okhttp3:mockwebserver 4.12.0
+org.awaitility:awaitility 4.2.2
+
+# Внешние API (без библиотек, свой HTTP-клиент на Spring RestClient)
+MAX Bot API — https://dev.max.ru/docs-api (основной транспорт)
+VK API 5.199 — запасной транспорт

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: shtab-klassa
+  config:
+    import: optional:file:./application-local.yml
+  datasource:
+    url: jdbc:h2:file:./data/shtab;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;AUTO_SERVER=TRUE
+    username: sa
+    password: ""
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+
+shtab:
+  summary:
+    min-interval: 300ms
+  reminder:
+    # для демо можно временно уменьшить, например до 30s, чтобы показать повторное напоминание
+    cooldown: 10m
